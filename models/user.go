@@ -14,7 +14,7 @@ type user struct {
 }
 
 func Register(Username string,Password string) bool{
-	stm ,err:=dao.DB.Prepare("insert into table_test values (?,?,?) ")
+	stm ,err:=dao.DB.Prepare("insert into values(username, password) table_test values (?,?) ")
 	if err != nil {
 		fmt.Println("insert failed ",err)
 		return false
